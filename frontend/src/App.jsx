@@ -27,8 +27,11 @@ function AnimatedRoutes() {
 }
 
 function App() {
+  // Use basename for GitHub Pages, empty for local development
+  const basename = import.meta.env.PROD ? '/senator-hussein-khodair' : '';
+  
   return (
-    <Router>
+    <Router basename={basename}>
       <AnimatedRoutes />
     </Router>
   );
