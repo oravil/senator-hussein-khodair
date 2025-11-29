@@ -1,0 +1,17 @@
+{
+  "name": "senator-website-monorepo",
+  "version": "1.0.0",
+  "description": "موقع د. حسين خضير - مشروع متكامل",
+  "scripts": {
+    "install:all": "cd frontend && npm install && cd ../backend && npm install && cd ../admin-dashboard && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:admin": "cd admin-dashboard && npm run dev",
+    "setup": "npm run install:all && cd backend && node scripts/createAdmin.js",
+    "build:frontend": "cd frontend && npm run build",
+    "build:admin": "cd admin-dashboard && npm run build"
+  },
+  "keywords": ["react", "express", "mongodb", "nodejs"],
+  "author": "",
+  "license": "ISC"
+}
