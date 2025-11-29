@@ -29,7 +29,7 @@ const HomePage = () => {
               <div className="relative">
                 <div className="aspect-square max-w-md mx-auto bg-gradient-to-br from-amber-100 to-amber-50 rounded-3xl overflow-hidden shadow-2xl border-4 border-primary-200">
                   <img 
-                    src="/images/dr-hussein-khodair-office.jpg" 
+                    src={`${import.meta.env.BASE_URL}images/dr-hussein-khodair-office.jpg`}
                     alt="الدكتور حسين خضير في مجلس الشيوخ" 
                     className="w-full h-full object-cover"
                   />

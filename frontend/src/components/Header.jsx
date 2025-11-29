@@ -27,7 +27,7 @@ export default function Header() {
           <Link to="/" className="flex items-center gap-4">
             <div className="w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-50 rounded-full flex items-center justify-center shadow-xl p-1">
               <img 
-                src="/images/senate-logo.jpg" 
+                src={`${import.meta.env.BASE_URL}images/senate-logo.jpg`}
                 alt="شعار مجلس الشيوخ المصري" 
                 className="w-full h-full object-cover rounded-full"
               />
