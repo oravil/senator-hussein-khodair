@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📚 الوثائق
+    url: https://github.com/oravil/senator-hussein-khodair/blob/main/README.md
+    about: راجع الوثائق للحصول على المساعدة
+  - name: ❓ الأسئلة الشائعة
+    url: https://github.com/oravil/senator-hussein-khodair/blob/main/docs/FAQ.md
+    about: ابحث عن إجابات للأسئلة الشائعة
+  - name: 💬 المناقشات
+    url: https://github.com/oravil/senator-hussein-khodair/discussions
+    about: للأسئلة والمناقشات العامة
