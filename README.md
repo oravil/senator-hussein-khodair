@@ -6,8 +6,12 @@
 ![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-green.svg)
 ![MongoDB](https://img.shields.io/badge/mongodb-%3E%3D6.0.0-green.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![GitHub Stars](https://img.shields.io/github/stars/oravil/senator-hussein-khodair?style=social)
+![GitHub Forks](https://img.shields.io/github/forks/oravil/senator-hussein-khodair?style=social)
 
 مشروع متكامل واحترافي لموقع السيناتور د. حسين خضير - عضو مجلس الشيوخ المصري
+
+[📖 الوثائق](./INSTALLATION_GUIDE.md) • [🚀 البدء السريع](./QUICK_START.md) • [❓ الأسئلة الشائعة](./FAQ.md) • [🔒 الأمان](./SECURITY.md)
 
 </div>
 
@@ -148,6 +152,11 @@ Password: admin123
 للمزيد من التفاصيل، راجع:
 
 - 📖 [دليل التثبيت المفصل](./INSTALLATION_GUIDE.md)
+- 📖 [دليل البدء السريع](./QUICK_START.md)
+- 📖 [الأسئلة الشائعة](./FAQ.md)
+- 📖 [دليل النشر](./DEPLOYMENT.md)
+- 📖 [سياسة الأمان](./SECURITY.md)
+- 📖 [دليل المساهمة](./CONTRIBUTING.md)
 - 📖 [Frontend Documentation](./frontend/README.md)
 - 📖 [Backend Documentation](./backend/README.md)
 - 📖 [Admin Dashboard Documentation](./admin-dashboard/README.md)

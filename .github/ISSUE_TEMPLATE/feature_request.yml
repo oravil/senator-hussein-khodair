@@ -1,0 +1,117 @@
+{
+  "name": "✨ طلب ميزة جديدة",
+  "description": "اقترح فكرة جديدة للمشروع",
+  "title": "[FEATURE] ",
+  "labels": ["enhancement", "needs-review"],
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "شكراً لاقتراحك! نحن نقدّر أفكارك لتحسين المشروع."
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "feature-description",
+      "attributes": {
+        "label": "وصف الميزة",
+        "description": "وصف واضح ومفصل للميزة المقترحة",
+        "placeholder": "أريد إضافة ميزة..."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "problem",
+      "attributes": {
+        "label": "المشكلة التي تحلها",
+        "description": "هل هذه الميزة مرتبطة بمشكلة؟ صفها هنا",
+        "placeholder": "أشعر بالإحباط عندما..."
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "solution",
+      "attributes": {
+        "label": "الحل المقترح",
+        "description": "كيف تتصور تنفيذ هذه الميزة؟",
+        "placeholder": "أقترح أن..."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "alternatives",
+      "attributes": {
+        "label": "البدائل المحتملة",
+        "description": "هل فكرت في حلول بديلة؟"
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "benefits",
+      "attributes": {
+        "label": "الفوائد",
+        "description": "ما الفوائد المتوقعة من هذه الميزة؟",
+        "placeholder": "هذه الميزة ستساعد في..."
+      }
+    },
+    {
+      "type": "dropdown",
+      "id": "component",
+      "attributes": {
+        "label": "المكون المقترح",
+        "options": [
+          "Frontend",
+          "Admin Dashboard",
+          "Backend API",
+          "Database",
+          "Documentation",
+          "جميع المكونات",
+          "أخرى"
+        ]
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "dropdown",
+      "id": "priority",
+      "attributes": {
+        "label": "الأولوية المقترحة",
+        "options": [
+          "منخفضة - Nice to have",
+          "متوسطة - مهمة",
+          "عالية - ضرورية",
+          "حرجة - عاجلة"
+        ],
+        "default": 0
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "additional",
+      "attributes": {
+        "label": "معلومات إضافية",
+        "description": "Screenshots، mockups، أو أي معلومات إضافية"
+      }
+    },
+    {
+      "type": "checkboxes",
+      "id": "contribution",
+      "attributes": {
+        "label": "هل تريد المساهمة في تطوير هذه الميزة؟",
+        "options": [
+          {
+            "label": "نعم، أنا مستعد للمساهمة في تطوير هذه الميزة"
+          }
+        ]
+      }
+    }
+  ]
+}
