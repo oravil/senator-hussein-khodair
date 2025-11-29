@@ -123,7 +123,7 @@ const HeroSection = () => {
               {/* Image placeholder */}
               <div className="relative z-10 bg-gradient-to-br from-amber-100 to-amber-50 rounded-3xl aspect-[3/4] max-w-md mx-auto overflow-hidden shadow-2xl border-4 border-amber-500/20">
                 <img
-                  src={`${import.meta.env.BASE_URL}images/dr-hussein-khodair.jpg`}
+                  src="./images/dr-hussein-khodair.jpg"
                   alt="الدكتور حسين خضير"
                   className="w-full h-full object-cover"
                 />
