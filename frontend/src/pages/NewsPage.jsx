@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Layout from '../components/Layout';
 import NewsCard from '../components/NewsCard';
 import { newsAPI } from '../services/api';
 
@@ -29,7 +28,6 @@ export default function NewsPage() {
   };
 
   return (
-    <Layout>
       <section className="pt-32 pb-20 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -50,6 +48,5 @@ export default function NewsPage() {
           )}
         </div>
       </section>
-    </Layout>
   );
 }

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Layout from '../components/Layout';
 import { contactAPI } from '../services/api';
 import { Send, Phone, Mail, MapPin } from 'lucide-react';
 
@@ -34,7 +33,6 @@ export default function ContactPage() {
   };
 
   return (
-    <Layout>
       <section className="pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
@@ -192,6 +190,5 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </Layout>
   );
 }

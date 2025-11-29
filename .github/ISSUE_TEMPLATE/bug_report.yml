@@ -3,115 +3,112 @@
   "description": "الإبلاغ عن مشكلة لمساعدتنا في التحسين",
   "title": "[BUG] ",
   "labels": ["bug", "needs-triage"],
-  "body": [
-    {
-      "type": "markdown",
-      "attributes": {
-        "value": "شكراً لإبلاغك عن المشكلة! يرجى ملء المعلومات التالية لمساعدتنا في حل المشكلة بسرعة."
-      }
-    },
-    {
-      "type": "textarea",
-      "id": "description",
-      "attributes": {
-        "label": "وصف المشكلة",
-        "description": "وصف واضح وموجز للمشكلة",
-        "placeholder": "أخبرنا ما حدث..."
+  "body":
+    [
+      {
+        "type": "markdown",
+        "attributes":
+          {
+            "value": "شكراً لإبلاغك عن المشكلة! يرجى ملء المعلومات التالية لمساعدتنا في حل المشكلة بسرعة.",
+          },
       },
-      "validations": {
-        "required": true
-      }
-    },
-    {
-      "type": "textarea",
-      "id": "steps",
-      "attributes": {
-        "label": "خطوات إعادة الإنتاج",
-        "description": "كيف يمكننا إعادة المشكلة؟",
-        "placeholder": "1. اذهب إلى...\n2. انقر على...\n3. قم بالتمرير إلى...\n4. ستظهر المشكلة"
+      {
+        "type": "textarea",
+        "id": "description",
+        "attributes":
+          {
+            "label": "وصف المشكلة",
+            "description": "وصف واضح وموجز للمشكلة",
+            "placeholder": "أخبرنا ما حدث...",
+          },
+        "validations": { "required": true },
       },
-      "validations": {
-        "required": true
-      }
-    },
-    {
-      "type": "textarea",
-      "id": "expected",
-      "attributes": {
-        "label": "السلوك المتوقع",
-        "description": "ما الذي كان يجب أن يحدث؟"
+      {
+        "type": "textarea",
+        "id": "steps",
+        "attributes":
+          {
+            "label": "خطوات إعادة الإنتاج",
+            "description": "كيف يمكننا إعادة المشكلة؟",
+            "placeholder": "1. اذهب إلى...\n2. انقر على...\n3. قم بالتمرير إلى...\n4. ستظهر المشكلة",
+          },
+        "validations": { "required": true },
       },
-      "validations": {
-        "required": true
-      }
-    },
-    {
-      "type": "textarea",
-      "id": "actual",
-      "attributes": {
-        "label": "السلوك الفعلي",
-        "description": "ما الذي حدث بالفعل؟"
+      {
+        "type": "textarea",
+        "id": "expected",
+        "attributes":
+          {
+            "label": "السلوك المتوقع",
+            "description": "ما الذي كان يجب أن يحدث؟",
+          },
+        "validations": { "required": true },
       },
-      "validations": {
-        "required": true
-      }
-    },
-    {
-      "type": "textarea",
-      "id": "screenshots",
-      "attributes": {
-        "label": "Screenshots",
-        "description": "إن أمكن، أضف screenshots للمشكلة"
-      }
-    },
-    {
-      "type": "dropdown",
-      "id": "component",
-      "attributes": {
-        "label": "المكون المتأثر",
-        "options": [
-          "Frontend",
-          "Admin Dashboard",
-          "Backend API",
-          "Database",
-          "غير متأكد"
-        ]
+      {
+        "type": "textarea",
+        "id": "actual",
+        "attributes":
+          { "label": "السلوك الفعلي", "description": "ما الذي حدث بالفعل؟" },
+        "validations": { "required": true },
       },
-      "validations": {
-        "required": true
-      }
-    },
-    {
-      "type": "input",
-      "id": "os",
-      "attributes": {
-        "label": "نظام التشغيل",
-        "placeholder": "مثال: Windows 11, macOS 13, Ubuntu 22.04"
-      }
-    },
-    {
-      "type": "input",
-      "id": "browser",
-      "attributes": {
-        "label": "المتصفح",
-        "placeholder": "مثال: Chrome 120, Firefox 115, Safari 16"
-      }
-    },
-    {
-      "type": "input",
-      "id": "version",
-      "attributes": {
-        "label": "إصدار المشروع",
-        "placeholder": "مثال: v1.0.0"
-      }
-    },
-    {
-      "type": "textarea",
-      "id": "additional",
-      "attributes": {
-        "label": "معلومات إضافية",
-        "description": "أي معلومات أخرى قد تساعدنا في حل المشكلة"
-      }
-    }
-  ]
+      {
+        "type": "textarea",
+        "id": "screenshots",
+        "attributes":
+          {
+            "label": "Screenshots",
+            "description": "إن أمكن، أضف screenshots للمشكلة",
+          },
+      },
+      {
+        "type": "dropdown",
+        "id": "component",
+        "attributes":
+          {
+            "label": "المكون المتأثر",
+            "options":
+              [
+                "Frontend",
+                "Admin Dashboard",
+                "Backend API",
+                "Database",
+                "غير متأكد",
+              ],
+          },
+        "validations": { "required": true },
+      },
+      {
+        "type": "input",
+        "id": "os",
+        "attributes":
+          {
+            "label": "نظام التشغيل",
+            "placeholder": "مثال: Windows 11, macOS 13, Ubuntu 22.04",
+          },
+      },
+      {
+        "type": "input",
+        "id": "browser",
+        "attributes":
+          {
+            "label": "المتصفح",
+            "placeholder": "مثال: Chrome 120, Firefox 115, Safari 16",
+          },
+      },
+      {
+        "type": "input",
+        "id": "version",
+        "attributes":
+          { "label": "إصدار المشروع", "placeholder": "مثال: v1.0.0" },
+      },
+      {
+        "type": "textarea",
+        "id": "additional",
+        "attributes":
+          {
+            "label": "معلومات إضافية",
+            "description": "أي معلومات أخرى قد تساعدنا في حل المشكلة",
+          },
+      },
+    ],
 }

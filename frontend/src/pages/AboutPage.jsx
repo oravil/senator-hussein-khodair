@@ -1,10 +1,8 @@
 import React from 'react';
-import Layout from '../components/Layout';
 import { Star, Award, Heart } from 'lucide-react';
 
 export default function AboutPage() {
   return (
-    <Layout>
       <section className="pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
@@ -64,6 +62,5 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </Layout>
   );
 }

@@ -1,69 +1,132 @@
-import React from 'react';
+import HeroSection from '../components/sections/HeroSection';
+import StatsSection from '../components/sections/StatsSection';
+import NewsSection from '../components/sections/NewsSection';
+import SuggestionsSection from '../components/sections/SuggestionsSection';
+import ScrollReveal from '../components/ui/ScrollReveal';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import Layout from '../components/Layout';
-import AchievementCard from '../components/AchievementCard';
-import { Send, Users, Award, FileText, Heart } from 'lucide-react';
+import Button from '../components/ui/Button';
 
-export default function HomePage() {
-  const achievements = [
-    { icon: <Award className="w-8 h-8" />, number: '50+', label: 'مشروع صحي' },
-    { icon: <Users className="w-8 h-8" />, number: '100K+', label: 'مستفيد' },
-    { icon: <FileText className="w-8 h-8" />, number: '200+', label: 'قرار برلماني' },
-    { icon: <Heart className="w-8 h-8" />, number: '30+', label: 'مبادرة صحية' }
-  ];
-
+const HomePage = () => {
   return (
-    <Layout>
-      <section className="pt-32 pb-20 px-6">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-fade-in">
-              <div className="inline-block">
-                <span className="px-4 py-2 bg-amber-500/20 border border-amber-500 rounded-full text-amber-300 text-sm">
-                  خدمة الوطن والمواطن
-                </span>
-              </div>
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent">
-                  د. حسين خضير
-                </span>
-              </h1>
-              <p className="text-xl text-blue-200 leading-relaxed">
-                عضو مجلس الشيوخ المصري ووكيل لجنة الصحة والسكان، نعمل معاً من أجل مستقبل صحي أفضل لجميع المواطنين
-              </p>
-              <div className="flex gap-4">
-                <Link 
-                  to="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 rounded-full font-bold shadow-xl shadow-amber-500/50 transform hover:scale-105 transition-all flex items-center gap-2"
-                >
-                  تواصل معنا <Send className="w-5 h-5" />
-                </Link>
-                <Link 
-                  to="/about"
-                  className="px-8 py-4 bg-white/10 hover:bg-white/20 rounded-full font-bold backdrop-blur-sm border border-white/20 transform hover:scale-105 transition-all"
-                >
-                  اعرف المزيد
-                </Link>
-              </div>
-            </div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* Hero Section */}
+      <HeroSection />
 
-            <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-amber-500/20 to-blue-500/20 rounded-3xl backdrop-blur-lg border border-white/10 shadow-2xl flex items-center justify-center">
-                <Users className="w-48 h-48 text-amber-400/30" />
-              </div>
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-amber-500 rounded-full blur-3xl opacity-50 animate-pulse"></div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-500 rounded-full blur-3xl opacity-50 animate-pulse"></div>
-            </div>
-          </div>
+      {/* Stats Section */}
+      <StatsSection />
 
-          {/* Achievements */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
-            {achievements.map((item, idx) => (
-              <AchievementCard key={idx} {...item} />
-            ))}
+      {/* About Preview Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <ScrollReveal direction="right">
+              <div className="relative">
+                <div className="aspect-square max-w-md mx-auto bg-gradient-to-br from-amber-100 to-amber-50 rounded-3xl overflow-hidden shadow-2xl border-4 border-primary-200">
+                  <img 
+                    src="/images/dr-hussein-khodair-office.jpg" 
+                    alt="الدكتور حسين خضير في مجلس الشيوخ" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                {/* Decorative elements */}
+                <motion.div
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                  className="absolute -top-4 -right-4 bg-secondary-500 text-white px-4 py-2 rounded-xl shadow-lg"
+                >
+                  🏆 +15 سنة خبرة
+                </motion.div>
+                <motion.div
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
+                  className="absolute -bottom-4 -left-4 bg-primary-600 text-white px-4 py-2 rounded-xl shadow-lg"
+                >
+                  ⚕️ رئيس نابكو للأدوية
+                </motion.div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="left">
+              <div>
+                <h3 className="text-sm font-semibold text-primary-600 mb-2">عن الدكتور حسين خضير</h3>
+                <h2 className="text-4xl font-bold mb-6 text-gray-900">
+                  رحلة من العطاء والخدمة العامة
+                </h2>
+                <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                  بخبرة تمتد لأكثر من 15 عاماً في المجال الصحي والتشريعي، أعمل على تطوير السياسات الصحية 
+                  وتحسين جودة الخدمات الطبية المقدمة للمواطنين.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center gap-3 text-gray-700">
+                    <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center">
+                      ✓
+                    </div>
+                    عضو مجلس الشيوخ المصري
+                  </li>
+                  <li className="flex items-center gap-3 text-gray-700">
+                    <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center">
+                      ✓
+                    </div>
+                    وكيل لجنة الصحة والسكان
+                  </li>
+                  <li className="flex items-center gap-3 text-gray-700">
+                    <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center">
+                      ✓
+                    </div>
+                    رئيس مجلس إدارة شركة نابكو للأدوية
+                  </li>
+                </ul>
+                <Link to="/about">
+                  <Button variant="outline" size="lg">
+                    اقرأ المزيد عن رحلتي
+                  </Button>
+                </Link>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
-    </Layout>
+
+      {/* News Section */}
+      <NewsSection />
+
+      {/* Suggestions Section */}
+      <SuggestionsSection />
+
+      {/* Call to Action */}
+      <section className="py-20 bg-gradient-to-br from-primary-600 to-primary-800 text-white relative overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <ScrollReveal>
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-4xl font-bold mb-6">معاً نبني مستقبلاً صحياً أفضل</h2>
+              <p className="text-xl mb-8 text-primary-100">
+                صوتك يهمنا. شاركنا أفكارك واقتراحاتك لتطوير الخدمات الصحية في مصر
+              </p>
+              <Link to="/contact">
+                <Button variant="secondary" size="lg">
+                  شارك برأيك الآن
+                </Button>
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+    </motion.div>
   );
-}
+};
+
+export default HomePage;

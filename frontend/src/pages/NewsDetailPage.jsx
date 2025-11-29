@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import Layout from '../components/Layout';
 import { newsAPI } from '../services/api';
 import { Calendar, ArrowRight } from 'lucide-react';
 
@@ -27,22 +26,17 @@ export default function NewsDetailPage() {
 
   if (loading) {
     return (
-      <Layout>
         <div className="pt-32 pb-20 px-6 text-center text-blue-200">جاري التحميل...</div>
-      </Layout>
     );
   }
 
   if (!news) {
     return (
-      <Layout>
         <div className="pt-32 pb-20 px-6 text-center text-blue-200">الخبر غير موجود</div>
-      </Layout>
     );
   }
 
   return (
-    <Layout>
       <section className="pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-4xl">
           <button
@@ -70,6 +64,5 @@ export default function NewsDetailPage() {
           </div>
         </div>
       </section>
-    </Layout>
   );
 }
